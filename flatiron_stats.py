@@ -41,6 +41,6 @@ def p_value_welch_ttest(a, b, two_sided=False):
     p = 1-stats.t.cdf(np.abs(t), df)
     
     if two_sided:
-        return 2*p
+        return 2*p,df
     else:
-        return p
+        return p,df
